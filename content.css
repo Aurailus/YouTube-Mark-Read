@@ -1,0 +1,81 @@
+/** Hide comments until they've been processed. */ 
+ytcp-comment:not([data-ycc]) {
+	display: none !important;
+	& + ytcp-comment-replies {
+		display: none !important;
+	}
+}
+
+/** Hide 1-px border from comment thread in list. */
+ytcp-comment-thread:has(> ytcp-comment[data-ycc=hidden]),
+ytcp-comment-thread:has(> ytcp-comment:not([data-ycc])) {
+	display: none !important;
+}
+
+ytcp-comment[data-ycc=dimmed]	{
+	opacity: 0.75;
+	background-color: #fff1;
+
+	/* 
+	 * Grab both the text and the parent. 
+	 * The parent allows the blur to be smooth (no overflow clipping), but may fail if the styles change.
+	 *Also blur the text itself just incase for added robustness.
+	 */
+	&:not(:hover) {
+		& #content-text, & #expander:has(#content-text) {
+			filter: blur(2.5px);
+			user-select: none;
+			transition: filter 0.2s;
+		}
+	}
+
+	& #content-text, & #expander:has(#content-text) {
+		transition: filter 0.2s 0.3s;
+	}
+}
+
+ytcp-comment[data-ycc=hidden] {
+	display: none;
+	& + ytcp-comment-replies {
+		display: none;
+	}
+}
+
+.ycc-hide-button {
+	margin-right: 20px;
+
+	&:last-child {
+		margin-left: 20px;
+		margin-right: unset;
+	}
+}
+
+#ycc-hidden-count {
+	display: flex;
+	position: absolute;
+	bottom: 22px;
+	left: 60px;
+	font-size: 12px;
+	gap: 12px;
+
+	&.hidden {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	p {
+		opacity: 0.6;
+	}
+	
+	button {
+		all: unset;
+		color: white;
+		text-decoration: underline;
+		opacity: 0.8;
+		cursor: pointer;
+	}
+}
+
+.ycc-bulk-hide-button.hidden {
+	display: none;
+}

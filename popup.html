@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <img class="icon" src="icon_hide_bulk.svg"/>
+      <h1 class="title">YouTube<br/>Mark Read</h1>
+      <p class="description">Made with ❤ by <a href="https://aurailus.com" target="_blank">Aurailus</a></p>
+  
+      <div class="options">
+        <div class="restore-row">
+          <button class="button" id="restore-last" disabled>
+            <img src="icon_show.svg"/>
+            <div>
+              <p class="label">Restore Last Comment</p>
+              <p class="sub"></p>
+            </div>
+          </button>
+          <button class="button" id="restore-dropdown">
+            <img src="icon_history.svg"/>
+          </button>
+        </div>
+  
+        <div id="restore-timed">
+          <button class="button" id="restore-day">
+            <p class="label">Restore Last Day <span id="restore-day-count"></span></p>
+          </button>
+          <button class="button" id="restore-week">
+            <p class="label">Restore Last Week <span id="restore-week-count"></span></p>
+          </button>
+          <button class="button" id="restore-month">
+            <p class="label">Restore Last Month <span id="restore-month-count"></span></p>
+          </button>
+          <button class="button" id="restore-year">
+            <p class="label">Restore Last Year <span id="restore-year-count"></span></p>
+          </button>
+          <button class="button" id="restore-all">
+            <p class="label">Restore All <span id="restore-all-count"></span></p>
+          </button>
+        </div>      
+  
+        <a class="button" id="support" href="https://www.patreon.com/c/aurailus" target="_blank">
+          <img src="icon_heart.svg">
+          <p>Support me on Patreon!</p>
+        </a>
+  
+        <p class="fine"><a href="">License</a>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;<a href="">Privacy</a>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;<a href="">Source</a>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;<a href="">Issues</a></p>
+      </div>
+    </div>
+		
+    <div id="confirm-popup">
+      <p class="header">Are you Sure?</p>
+      <p class="body" id="popup-text">This popup wasn't instantiated correctly.</p>
+      
+      <div class="row">
+        <button class="button" id="popup-no">
+          <p class="label">Cancel</p>
+        </button>
+        <button class="button" id="popup-yes">
+          <p class="label">Confirm</p>
+        </button>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

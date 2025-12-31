@@ -1,0 +1,31 @@
+{
+  "name": "YouTube Mark Read",
+  "description": "Hide comments in YouTube Studio by marking them as Read without having to respond to them.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+	"permissions": [
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"css": ["content.css"],
+			"js": ["content.js"],
+			"matches": [
+				"https://studio.youtube.com/*"
+			]
+		}
+	],
+	"host_permissions": [
+		"https://studio.youtube.com/*"
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["hello_extensions.png", "page.js", "icon_hide.svg", "icon_hide_bulk.svg", "icon_show.svg", "icon_show_bulk.svg"],
+			"matches": [ "https://studio.youtube.com/*" ]
+		}
+	]
+}
