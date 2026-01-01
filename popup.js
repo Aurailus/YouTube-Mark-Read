@@ -68,8 +68,8 @@ const confirm = (text) => {
 }
 
 const sendRefreshSignal = () => {
+	chrome.runtime.sendMessage({ type: "update-count" });
 	chrome.tabs.query({ url: "https://studio.youtube.com/*" }, (tabs) => {
-		console.log(tabs);
 		tabs.forEach(tab => chrome.tabs.sendMessage(tab.id, { type: "ycc-refresh-storage" }));
 	});
 }

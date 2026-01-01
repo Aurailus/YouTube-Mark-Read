@@ -105,7 +105,6 @@ const handleComment = (comment) => {
 
 const processComments = () => {
 	commentsContainer = document.querySelector("ytcp-comments-section #contents tp-yt-iron-list #items");
-	// console.warn("Comments container", [...commentsContainer.querySelectorAll("ytcp-comment")].length);
 	if (!commentsContainer) return;
 	const comments = [...commentsContainer.querySelectorAll("ytcp-comment")];
 	numHiddenOnPage = comments.map(handleComment).filter(Boolean).length;

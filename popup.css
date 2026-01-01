@@ -1,6 +1,7 @@
 body { 
-	background-color: #161616;
-	width: 310px;
+	background-color: #282828;
+	min-width: 310px;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	padding: 0px;
@@ -11,6 +12,7 @@ body {
 
 .container {
 	display: flex;
+	background-color: #161616;
 	flex-direction: column;
 	height: max-content;
 	filter: none;
@@ -35,7 +37,7 @@ html {
 	width: 60px;
 	margin: 0 auto;
 	margin-top: 12px;	
-	filter: brightness(140%);
+	filter: brightness(140%) drop-shadow(0px 2px 10px #f446);
 }
 
 .title {
@@ -47,7 +49,7 @@ html {
 	font-weight: 800;
 	line-height: 1em;
 	filter: drop-shadow(0px 1px 4px #f449);
-	background: linear-gradient(135deg, #ff1b49ff, #ff7baeff);
+	background: linear-gradient(135deg, #ff2525ff, #ff7baeff);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }

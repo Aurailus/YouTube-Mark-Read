@@ -29,14 +29,16 @@ window.addEventListener("message", (event) => {
 		case "ycc-hide": {
 			hiddenPromise.then(() => {
 				hidden.set(event.data.id, Date.now());
-				chrome.storage.local.set({ hidden: [...hidden.entries()] });
+				chrome.storage.local.set({ hidden: [...hidden.entries()] }).then(() => 
+					chrome.runtime.sendMessage({ type: "update-count" }));
 			});
 			break;
 		}
 		case "ycc-show": {
 			hiddenPromise.then(() => {
 				hidden.delete(event.data.id);
-				chrome.storage.local.set({ hidden: [...hidden.entries()] });
+				chrome.storage.local.set({ hidden: [...hidden.entries()] }).then(() => 
+					chrome.runtime.sendMessage({ type: "update-count" }));
 			});
 			break;
 		}
