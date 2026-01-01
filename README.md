@@ -1,4 +1,4 @@
-# YouTube Mark Rad
+# YouTube Mark Read
 
 **Adds the functionality to YouTube Studio to Mark a comment as Read, which hides it from comments listings.**
 
