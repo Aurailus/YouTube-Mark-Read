@@ -1,5 +1,9 @@
 # YouTube Mark Read
 
+![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/kjlblmacdkbifigclaoildgbbfdobnkl?logo=googlechrome&logoColor=%23ffffff&label=Chrome%20Web%20Store)
+![Mozilla Add-on Version](https://img.shields.io/amo/v/youtube-mark-read?logo=firefoxbrowser&logoColor=%23fff&label=Firefox%20Extension)
+
+
 **Adds the functionality to YouTube Studio to Mark a comment as Read, which hides it from comments listings.**
 
 With the default Response Status: Unresponded filter in YouTube Studio, comments only leave the Community tab or the video's Comments page when they are replied to or reacted to with a Heart. This means that the screen can get increasingly cluttered if there are a lot of comments that don't warrant a direct response. YouTube Mark Read allows you to mark comments as Read, which hides them from all comments feeds in YouTube Studio, unless you restore them. 
