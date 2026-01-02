@@ -78,8 +78,7 @@ const addBulkHideButton = () => {
 }
 
 const handleComment = (comment) => {
-	const id = comment.data?.commentId;
-	const isHidden = (hiddenComments?.has(id) ?? false);
+	const isHidden = (hiddenComments?.has(comment.data?.commentId) ?? false);
 	if (hiddenComments) comment.setAttribute("data-ycc", isHidden ? (useDimmed ? "dimmed" : "hidden") : "visible");
 
 	const toolbar = comment.querySelector("#comment-actions");
@@ -95,12 +94,15 @@ const handleComment = (comment) => {
 		const img = document.createElement("img");
 		img.src = iconUrl;
 		icon.appendChild(img);
-		button.addEventListener("click", () => hiddenComments?.has(id) ? showComment(id) : hideComment(id));
+		button.addEventListener("click", ({ target }) => {
+			const id = target.closest("ytcp-comment").data.commentId;
+			hiddenComments?.has(id) ? showComment(id) : hideComment(id)
+		});
 	}
 	const icon = button.querySelector("yt-icon img");
 	if (icon.src !== iconUrl) icon.src = iconUrl;
 	
-	return hiddenComments?.has(id) ?? false;
+	return hiddenComments?.has(comment.data?.commentId) ?? false;
 }
 
 const processComments = () => {
