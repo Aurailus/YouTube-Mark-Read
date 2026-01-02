@@ -1,7 +1,7 @@
 {
   "name": "YouTube Mark Read",
   "description": "Hide comments in YouTube Studio by marking them as Read without having to respond to them.",
-  "version": "1.0",
+  "version": "1.0.1",
   "manifest_version": 3,
 	"icons": {
 		"16": "icon_16.png",
