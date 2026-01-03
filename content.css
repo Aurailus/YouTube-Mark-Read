@@ -79,3 +79,13 @@ ytcp-comment[data-ycc=hidden] {
 .ycc-bulk-hide-button.hidden {
 	display: none;
 }
+
+/* Hide comment snapshots entirely since I can't pull their IDs. */
+
+ytcd-comments-snapshot-item {
+	display: none !important;
+}
+
+ytcd-card:has(ytcd-comments-snapshot-item) {
+	display: none !important;
+}
