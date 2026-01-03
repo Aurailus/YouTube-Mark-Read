@@ -14,7 +14,8 @@
     "default_icon": "icon_128.png"
   },
 	"background": {
-		"service_worker": "background.js"
+		"service_worker": "background.js",
+		"type": "module"
 	},
 	"incognito": "spanning",
 	"permissions": [
@@ -35,7 +36,7 @@
 	],
 	"web_accessible_resources": [
 		{
-			"resources": ["hello_extensions.png", "page.js", "icon_hide.svg", "icon_hide_bulk.svg", "icon_show.svg", "icon.svg", "icon_show_bulk.svg"],
+			"resources": ["page.js", "storage.js", "icon_hide.svg", "icon_hide_bulk.svg", "icon_show.svg", "icon.svg", "icon_show_bulk.svg"],
 			"matches": [ "https://studio.youtube.com/*" ]
 		}
 	]
